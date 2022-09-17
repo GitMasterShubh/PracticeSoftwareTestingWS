@@ -1,0 +1,8 @@
+/.metadata/
+**/.metadata
+**/.class
+**/target/*.class
+src/**/*.class
+.class
+*.class
+**/.DS_Store
