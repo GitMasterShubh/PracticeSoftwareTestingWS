@@ -20,5 +20,20 @@ public class OpenAllBrowsersTest {
 	public void launchGoogleInEdge() {
 
 	}
+	
+	public void launchURLInChrome(String url) {
 
+	}
+
+	public void launchURLInFirefox(String url) {
+
+	}
+
+	public void launchURLInSafari(String url) {
+
+	}
+
+	public void launchURLInIE(String url) {
+
+	}
 }
