@@ -17,8 +17,9 @@ public class OpenAllBrowsersTest {
 	 * @param browsers
 	 * @param browserDriverSetupMode
 	 * 
-	 * About this Test Class: 
-	 * 		Session1: This TestClass contains tests, that Opens All Browsers and Launches a URL -
+	 * Q. 	What does this test class do? 
+	 * A.	This TestClass contains tests, 
+	 * 		that opens all Browsers and Launches a URL -
 	 * 
 	 */
 	
@@ -35,7 +36,7 @@ public class OpenAllBrowsersTest {
 	public void chromeBrowsersOpenTest() {
 
 		try {
-			String URL = "https://shubhamklogic.com/";
+			String URL = "https://shubhamklogic.com/?aim=Let's simplify coding";
 
 			WebDriver driver = new ChromeDriver();
 			driver.get(URL);
@@ -51,13 +52,12 @@ public class OpenAllBrowsersTest {
 	@Test(testName = "firefoxBrowsersOpenTest")
 	public void firefoxBrowsersOpenTest() {
 		try {
-			String URL = "https://shubhamklogic.com/";
+			String URL = "https://shubhamklogic.com/?aim=Let's simplify coding";
 			WebDriver driver = new FirefoxDriver();
 			driver.get(URL);
 			Thread.sleep(3000);
 			driver.close();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -65,13 +65,12 @@ public class OpenAllBrowsersTest {
 	@Test(testName = "safariBrowsersOpenTest")
 	public void safariBrowsersOpenTest() {
 		try {
-			String URL = "https://shubhamklogic.com/";
+			String URL = "https://shubhamklogic.com/?aim=Let's simplify coding";
 			WebDriver driver = new SafariDriver();
 			driver.get(URL);
 			Thread.sleep(3000);
 			driver.close();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -79,13 +78,12 @@ public class OpenAllBrowsersTest {
 	@Test(testName = "edgeBrowsersOpenTest")
 	public void edgeBrowsersOpenTest() {
 		try {
-			String URL = "https://shubhamklogic.com/";
+			String URL = "https://shubhamklogic.com/?aim=Let's simplify coding";
 			WebDriver driver = new EdgeDriver();
 			driver.get(URL);
 			Thread.sleep(3000);
 			driver.close();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
