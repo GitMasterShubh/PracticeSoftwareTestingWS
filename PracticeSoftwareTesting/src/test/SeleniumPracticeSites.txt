@@ -1,0 +1,7 @@
+// To practice different HTML Elements with Selenium,
+
+https://en.wikibooks.org/wiki/Special:Contributions/ShubhamKLogic
+Login with :
+Username=ShubhamKLogic
+Password=shubh**9
+Email=dummyshubhamklogic@gmail.com
