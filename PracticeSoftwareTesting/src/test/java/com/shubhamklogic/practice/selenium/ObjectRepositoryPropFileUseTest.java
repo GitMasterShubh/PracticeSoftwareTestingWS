@@ -1,5 +1,10 @@
 package com.shubhamklogic.practice.selenium;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -39,38 +44,50 @@ private WebDriver driver;
 	
 	/**
 	 * @throws Exception
-	 * Q. What does this testWindowHandling() test case do?
+	 * Q. What does this testPropertiesFilesObjectAccess() test case do?
 	 * A. Steps:  
-	 * 		a) It launches a URL, Where a link will there on first Tab UI, and once control will click the link,
-	 * 		b) A URL will be launched in a New browser window.
-	 * 		c) Then, Getting all opened window's ID,
-	 * 		d) Switching to the newly open window (child window),
-	 * 		e) Then, it again clicks on the 1st link of the newly opened window,
-	 * 		f) Closing the child window, And, switching control back to the Parent window.
+	 * 		a) Loads a properties file (Object Repository) = testing_static_details.properties
+	 * 		b) Use its key - values, to launch the URL
+	 * 		c) Login to the application
+	 * 		d) Validate, whether successfully logged in or not ? 
 	 */
 
-	@Test(priority = 1, testName = "Test - Multiple Browser Windows Handling", groups = { "selenium-intermediate", "sleep2sec", "current"})
-	public void testPropertiesFilesObjectAccess() throws Exception {
+	@Test(priority = 1, testName = "Test - Login into app by properties file", groups = { "selenium-intermediate", "sleep2sec", "current"})
+	public void testLoginByPropertiesFile() throws Exception {
 		
-		// Save login details in a .prop file,
-		// get those details from .prop file,
-		// launch url and cred 
-		// test complete..
-		/*
-		 * 	https://en.wikibooks.org/wiki/Special:Contributions/Shubhamklogic
-			Signed Up -
-			ShubhamKLogic
-			shubh**9
-			dummyshubhamklogic@gmail.com
-		 */
+		String fullPropFilePath = System.getProperty("user.dir")+ File.separator + "src"+ File.separator +"main"+ File.separator +"resources"+ File.separator +"ObjectRepository"+ File.separator +"testing_static_details.properties";
+		// /Users/ssrivastava/shubh-workspace/PracticeTech/SoftwareTestingRepo/PracticeSoftwareTestingWS/PracticeSoftwareTesting/src/main/resources/ObjectRepository/testing_static_details.properties
+		
+		// Step a) Load properties file (Object Repository)
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(
+			fullPropFilePath );
+		prop.load(fis);
+		
+
+		// Step b) Fetch value by passing its key = url-wikibooks-shubhamklogic, to launch the URL
+		driver.get( prop.getProperty("url-wikibooks-shubhamklogic") );
 		
 		
-		// a) Launching URL - a link will be present that will open a new window, once clicked..
-		driver.get("https://codepen.io/ShubhamKLogic/full/qBKjEjK?by=ShubhamKLogic.com");
+		// Step c) Login to the application 
+		driver.findElement(By.id("pt-login")).click();
 		
-		// switching to the frame, present in UI -
-		driver.switchTo().frame("result");
+		String uname = prop.getProperty("username-wikibooks-shubhamklogic");		// Use of Object repository..
+		String pwd = prop.getProperty("password-wikibooks-shubhamklogic");			// Use of Object repository..
 		
+		driver.findElement(By.cssSelector("#wpName1")).sendKeys(uname);
+		driver.findElement(By.cssSelector("#wpPassword1")).sendKeys(pwd);
+		driver.findElement(By.cssSelector("#wpLoginAttempt")).click();
+		
+		
+		// Step d) Validate, whether successfully logged in or not ? 
+		String expectedUserName = uname;
+		String actualUserName = driver.findElement(By.xpath("//a[@class='new']//span")).getText();
+		
+		if(expectedUserName.equals(actualUserName))
+			SeleniumHelperUtil.log("Hurrey !! Logged in using Object Repository - by ShubhamKLogic.com");
+		else
+			SeleniumHelperUtil.log("Oops !! Look like, not able to log it. Please check manuallay-");
 	}
 	
 	@AfterTest (groups = {"sleep2sec"})

@@ -26,7 +26,7 @@
 	  			</run>
 	  		</groups> -->
   		<classes>
-  			<class name="com.shubhamklogic.practice.selenium.ObjectRepositoryPropFileUseTest.xml"/>
+  			<class name="com.shubhamklogic.practice.selenium.ObjectRepositoryPropFileUseTest"/>
   		</classes>
   </test>
 </suite>

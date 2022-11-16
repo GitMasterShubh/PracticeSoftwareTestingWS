@@ -53,6 +53,7 @@ public class ClickHoldTest {
 	
 	@AfterClass( alwaysRun = true)
 	public void tearDown() {
+		// Once all test cases of this Test class, would be executed, then this tearDown() will be executed.
 		driver.close();
 		driver.quit();
 	}
