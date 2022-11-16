@@ -14,7 +14,7 @@
 			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
 	  	-->
   
-  <test name="ShubhamKLogic.com : BrowsersOpenTest">
+  <test name="ShubhamKLogic.com : Navigation Test">
   		<groups>
   			<run>
   				<include name="current" />
