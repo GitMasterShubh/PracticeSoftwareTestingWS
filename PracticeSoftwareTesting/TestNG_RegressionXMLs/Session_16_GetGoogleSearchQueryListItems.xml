@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="com.shubhamklogic.selenium.practice">
+  
+  <parameter name="browsers" value="chrome"/>
+	  	<!-- 
+	 		Desc: Parameter=browsers
+	 		This parameter configures at which browser the test cases would be executed.
+	 	-->
+  
+  <parameter name="browserDriverSetupMode" value="executableBrowserDrivers" />
+	  	<!-- 
+			Desc: Parameter=browserDriverSetupMode 
+			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
+	  	-->
+  
+  <test name="ShubhamKLogic.com : Google Search Query Result Count">
+  		<!-- 
+	  		To run any specific test case, 
+	  		1. uncomment below <groups> tag code
+	  		2. go to your below test class, and add word "current" in @test annotation attribute : groups = {"current", "other-group-values"} 
+	  		 -->
+  		<!-- <groups>
+  			<run>
+  				<include name="current" />
+  			</run>
+  		</groups> -->
+  		<classes>
+  			<class name="com.shubhamklogic.practice.selenium.GoogleSearchQueryResultCountTest"/>
+  		</classes>
+  </test>
+</suite>

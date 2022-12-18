@@ -1,0 +1,17 @@
+***************
+#1: Fixed below  SessionNotCreatedException Exception and Error.
+
+Error Message :
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+
+Problem Description:
+Whenever, I was trying to run the TestNG.xml, it was throwing above Exception and all TCs were getting fail.
+
+Solution: 
+In POM.xml, when removed the 'sikulixapi' dependency, the issue got resolved.
+
+
+
+
+***************
+#2: 
