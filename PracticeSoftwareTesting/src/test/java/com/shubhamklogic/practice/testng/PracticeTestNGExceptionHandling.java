@@ -3,7 +3,6 @@ package com.shubhamklogic.practice.testng;
 import org.testng.annotations.Test;
 
 public class PracticeTestNGExceptionHandling { 
-
 	
 	@Test
 	public void printMathResult_v1() {
@@ -26,7 +25,4 @@ public class PracticeTestNGExceptionHandling {
 			System.out.println( "Name length="+name.length());		// Exception will be handled by 'expectedExceptions' attribute
 		}
 	}																// Once thrown, No below code of that method will be executed - 
-	
-	
-	
 }

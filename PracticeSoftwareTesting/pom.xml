@@ -24,7 +24,9 @@
 		
 		
 		<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-		<!-- Session_18 : Sikuli Usage -->
+		<!-- Session_18 : Sikuli Usage 
+			  			  Commenting the dependency due to incompatibility with other dependencies of this project.
+		-->
 		<!-- <dependency>
 		    <groupId>com.sikulix</groupId>
 		    <artifactId>sikulixapi</artifactId>

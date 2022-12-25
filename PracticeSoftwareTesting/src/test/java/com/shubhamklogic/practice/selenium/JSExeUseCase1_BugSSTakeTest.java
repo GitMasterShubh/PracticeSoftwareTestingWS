@@ -139,10 +139,3 @@ public class JSExeUseCase1_BugSSTakeTest {
 		driver.quit();
 	}
 }
-
-
-
-
-
-
-

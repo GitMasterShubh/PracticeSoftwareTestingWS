@@ -5,14 +5,18 @@ import org.testng.annotations.Test;
 
 import com.shubhamklogic.practice.testng.LoginDataProvider;
 
-public class PracticeTestNGAnnotationAttrDepends {
 
+/**
+ * @author ssrivastava
+ * This TestClass tests TestNG 'depends' attribute, dataProvider and DataProvider class-
+ *
+ */
+public class PracticeTestNGAnnotationAttrDepends {
 	
 	@Test(dataProvider = "getEmailDataProvider")
 	public void newLoginTest(String eml) {		// Getting Single Data Object
 		
 		System.out.print("\n=====>>> (by DataProvider) :: Logging in with eml='"+eml);
-		
 	}
 	
 	/*
@@ -32,7 +36,6 @@ public class PracticeTestNGAnnotationAttrDepends {
 	public void loginTest(String unm, String pwd) {	// Getting MultiValue Data Object
 		
 		System.out.print("\n----->>> (by DataProvider) :: Logging in with unm='"+unm+"', pwd='"+pwd+"'\n");
-		
 	}
 
 	/*
@@ -50,12 +53,13 @@ public class PracticeTestNGAnnotationAttrDepends {
 	}
 	
 	
+	/*
+	 * Testing TestNG's DataProvider Class Feature -  
+	 */
+	
 	@Test(dataProvider = "googleAuthDataProvider", dataProviderClass = LoginDataProvider.class)
 	public void loginWithGoogleAuth(String unm) {	// Getting MultiValue Data Object
 		
 		System.out.print("\n~~~~~>>> (by DataProvider) :: Logging in with unm='"+unm);
-		
-		
 	}
-	
 }

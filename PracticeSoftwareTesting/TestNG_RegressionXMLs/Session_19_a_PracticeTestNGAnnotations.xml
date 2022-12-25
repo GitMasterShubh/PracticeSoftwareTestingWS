@@ -8,13 +8,13 @@
 	 		This parameter configures at which browser the test cases would be executed.
 	 	-->
   
-  <parameter name="browserDriverSetupMode" value="executableBrowserDrivers" />
+  <parameter name="browserDriverSetupMode" value="webDriverManager" />
 	  	<!-- 
 			Desc: Parameter=browserDriverSetupMode 
 			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
 	  	-->
   
-  <test name="ShubhamKLogic.com : Understanding TestNG Annotations">
+  <test name="ShubhamKLogic.com : Understand All TestNG Annotations">
   		<!-- 
 	  		To run any specific test case, 
 	  		1. Uncomment below <groups> tag code
@@ -28,7 +28,7 @@
   			</run>
   		</groups> -->
   		<classes>
-  			<class name="com.shubhamklogic.practice.selenium.PracticeTestNGAnnotationsTest"/>
+  			<class name="com.shubhamklogic.practice.testng.PracticeTestNGAnnotationsTest"/>
   		</classes>
   </test>
 </suite>

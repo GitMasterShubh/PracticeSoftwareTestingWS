@@ -8,13 +8,13 @@
 	 		This parameter configures at which browser the test cases would be executed.
 	 	-->
   
-  <parameter name="browserDriverSetupMode" value="executableBrowserDrivers" />
+  <parameter name="browserDriverSetupMode" value="webDriverManager" />
 	  	<!-- 
 			Desc: Parameter=browserDriverSetupMode 
 			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
 	  	-->
   
-  <test name="ShubhamKLogic.com : Website Broken Link Finding">
+  <test name="ShubhamKLogic.com : Test- Website Broken Link Finding">
   		<!-- 
 	  		To run any specific test case, 
 	  		1. Uncomment below <groups> tag code

@@ -3,11 +3,15 @@ package com.shubhamklogic.practice.java.tricky.programs;
 import java.util.LinkedList;
 import java.util.List;
 
+// Problem : How to calculate factor ?
+// Given   : 20
+// Output  : 1,2,4,5,10
+
 public class PracticeCalc3_FactorsOfNumber {
 
 	public static void main(String[] args) {
 		
-		printAllFactorsOf(40);
+		printAllFactorsOf(63);
 		
 	}
 
@@ -16,7 +20,7 @@ public class PracticeCalc3_FactorsOfNumber {
 		List facList = new LinkedList();
 		int tempNum = num, k = 1;
 		
-		while (k <= (int)tempNum/2) {
+		while (k <= tempNum/2) {
 			int rem = tempNum % k;
 			if( rem == 0 )
 				facList.add( k );

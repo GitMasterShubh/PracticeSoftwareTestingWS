@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
-// Guide : https://javarevisited.blogspot.com/2012/12/how-to-remove-duplicates-elements-from-ArrayList-Java.html
 /*
  * Problem Statement: 
  * 	1. How to remove duplicates elements from Array ? (Without Preserving the order of items)
@@ -15,9 +14,6 @@ import java.util.LinkedHashSet;
  * 	2. How to remove duplicates elements from ArrayList ? (Without considering final order of items) -  
  * 
  * 	3. How to remove duplicates elements from ArrayList preserving their order of items-
- * 
- * 
- * This class 
  * 
  */
 
@@ -29,11 +25,9 @@ public class PracticeArray2b_RemoveDuplicatesFromArray {
 		
 		System.out.println("Array with duplicates = " + Arrays.toString(arr));
 		
-		// Scenario 1: 
-//		techniqueOneToRemoveDuplicate(arr);
+		techniqueOneToRemoveDuplicate(arr);
 
 		techniqueTwoToRemoveDuplicate(arr);
-
 	}
 
 	// Solution of Scenario 1: 
@@ -49,17 +43,14 @@ public class PracticeArray2b_RemoveDuplicatesFromArray {
 		
 		ArrayList uniqueArrList = new ArrayList( set );
 		
-//		System.out.println("Array without duplicates = " + uniqueArrList.toString());
-		
 		System.out.print("Array without duplicates = ");
 		
 		print(uniqueArrList);
-		
 	}
 
 
 	// Scenario 2 : 
-	//  Q. How to remove duplicates elements from ArrayList ? (Without considering final order of items) -
+	//  Q. How to remove duplicates elements from ArrayList ? (Saving order of items) -
 	//  A. Use : new ArrayList -> new LinkedHashSet -> new ArrayList
 	private static void techniqueTwoToRemoveDuplicate(int[] arr) {
 		

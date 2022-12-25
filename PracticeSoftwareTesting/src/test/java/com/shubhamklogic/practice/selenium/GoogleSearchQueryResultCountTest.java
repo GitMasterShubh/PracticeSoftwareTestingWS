@@ -5,7 +5,6 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -68,7 +67,6 @@ public class GoogleSearchQueryResultCountTest {
 		// In above xpath, we have used 'descendant predicates' 
 		
 		SeleniumHelperUtil.log( "Total Suggestions ===> " + list.size() );
-		
 	}
 	
 	@Test(priority = 1, testName = "Test - Create Border Around Bug", groups = { "selenium-intermediate", "sleep2sec", "current"})

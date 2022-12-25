@@ -48,6 +48,7 @@ public class FindBrokenLinksInWebpage {
 		driver.manage().window().maximize();
 	}
 	
+	
 	@Test(testName = "Test: Webpage Broken Links Presence")
 	public void testWebpageBrokenLinksPresence() throws Exception {
 		
@@ -90,6 +91,3 @@ public class FindBrokenLinksInWebpage {
 		}
 	}
 }
-
-
-// org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.

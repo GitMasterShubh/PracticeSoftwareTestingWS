@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 // Guide : 
 /*
- * This class help to find largest and smallest number from integer array
+ * Problem : How to find 1 largest and 1 smallest number from a given integer array
  * 
  */
 
@@ -18,13 +18,13 @@ public class PracticeArray3_FindLargestSmallest {
 
 	private static void findLargestAndSmallest(int []arr) {
 		
-		int largest = Integer.MIN_VALUE;
-		int smallest = Integer.MAX_VALUE;
+		int largest = Integer.MIN_VALUE;		// set the largest -> MINIMUM value, so other value Bigger than that can be captured..
+		int smallest = Integer.MAX_VALUE;		// set the smallest -> MAXIMUM value, so other value Smaller than that can be captured..
 		
-		for ( int n : arr) {
-			if ( largest < n )
+		for ( int n : arr) {					// Check complete array..
+			if ( n > largest )
 				largest = n;
-			if ( smallest > n )
+			if ( n < smallest )
 				smallest = n;
 		}
 		

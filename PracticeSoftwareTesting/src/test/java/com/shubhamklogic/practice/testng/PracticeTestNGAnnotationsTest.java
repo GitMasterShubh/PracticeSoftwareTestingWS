@@ -15,13 +15,11 @@ import org.testng.annotations.Test;
 /**
  * @author ShubhamSrivastava
  * 
- * Run this test class' Test cases to see, which TestNG Annotation will execute first and which ones will be executed later.
+ * Below Test cases will help you to understand, which TestNG Annotation will execute first and which ones later.
  *
  */
 
 public class PracticeTestNGAnnotationsTest {
-
-	
 	
 	@BeforeSuite
 	public void preSetup(){

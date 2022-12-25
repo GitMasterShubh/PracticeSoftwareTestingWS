@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	 Currently, the sikuli api is not stable with our project's few dependencies versions.
+	 So, This TestClass would not perform any test case execution.
+	 Temporarily Commented the Dependency in pom.xml and 
+	 Temporarily Commented the Java code in this Test class as well. 
+-->
+
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="com.shubhamklogic.selenium.practice">
   

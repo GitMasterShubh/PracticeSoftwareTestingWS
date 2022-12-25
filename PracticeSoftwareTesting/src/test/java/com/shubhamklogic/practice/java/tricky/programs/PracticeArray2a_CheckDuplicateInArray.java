@@ -5,11 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-// Guide : https://javarevisited.blogspot.com/2012/02/how-to-check-or-detect-duplicate.html
 /*
  * This class only helps to check - Whether duplicates are present or not. 
  * Getting list of those duplicate objects, is covered in part 2b.
- * 
  */
 
 public class PracticeArray2a_CheckDuplicateInArray {
@@ -28,14 +26,14 @@ public class PracticeArray2a_CheckDuplicateInArray {
 
 		System.out.println("Array = " + Arrays.toString(arr));
 		
-		techniqueOneToCheckDuplicate(arr);
+		techniqueOneToCheckDuplicate(arr);			// technique 1..Insert no.s in Set, If returns False -- Got duplicate !!
 
-		techniqueTwoToCheckDuplicate(arr);
+		techniqueTwoToCheckDuplicate(arr);			// technique 2..Create List, Create Set, If both's size is diff -- Got duplicate !!
 
-		techniqueThreeToCheckDuplicate(arr);
+		techniqueThreeToCheckDuplicate(arr);		// technique 3..Compare each value, with whole array values..
 
 	}
-
+	// Insert no.s in Set, If returns False -- Got duplicate
 	private static void techniqueOneToCheckDuplicate(Object[] arr) {
 		
 		Set set = new HashSet();
@@ -83,9 +81,8 @@ public class PracticeArray2a_CheckDuplicateInArray {
 				}
 			}
 		}
-		if (notFoundDuplicate) {
+		if (notFoundDuplicate) 
 			System.out.println("Way 3) There are NO duplicate element(s) in array\n\n");
-		}
 	}
 
 }
