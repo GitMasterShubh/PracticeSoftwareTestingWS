@@ -1,10 +1,15 @@
 package com.shubhamklogic.practice.selenium;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -66,7 +71,6 @@ public class SeleniumHelperUtil {
 					chromeOptions.addArguments("disable-infobars"); 		// disabling infobars
 					chromeOptions.addArguments("--ignore-certificate-errors");
 					chromeOptions.setAcceptInsecureCerts(true);				// AcceptInsecureCerts 
-					
 					
 					driver = new ChromeDriver(chromeOptions);
 					setDriver(driver);
@@ -156,6 +160,24 @@ public class SeleniumHelperUtil {
 	public static void log(String msg) {
 		System.out.println("*** "+msg);
 	}
+	
+	public static void log(String msg, Object[] inputList) {
+		
+		System.out.print(msg);
+		
+		for( Object s: inputList) 
+			System.out.print(s+", ");
+		
+	}
+	
+	public static void log(String msg, String separator, Object[] inputList) {
+		
+		System.out.print(msg);
+		
+		for( Object s: inputList) 
+			System.out.print(s + separator);
+		
+	}
 
 	/**
 	 * Custom JS function.. 
@@ -223,5 +245,25 @@ public class SeleniumHelperUtil {
 		listElements = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 		
 		return listElements;
+	}
+
+	public static void createBorderAroundWebElement(String colourHex, WebElement element) {
+		
+		JavascriptExecutor jsRunner = (JavascriptExecutor) driver;
+		jsRunner.executeScript("arguments[0].style.border='5px solid "+colourHex+"'", element);
+		
+	}
+	
+	public static void takeAndSaveScreenshot(String ssFinalFilePath) throws Exception {
+		
+		File srcSSFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		
+		FileUtils.copyFile(
+			srcSSFile,
+			new File(ssFinalFilePath)		// targetSSFile
+		);
+		
+		log("Screenshot has been taken, and file has been saved. Refresh directory and check the screenshot file at location="+ssFinalFilePath);
+		
 	}
 }

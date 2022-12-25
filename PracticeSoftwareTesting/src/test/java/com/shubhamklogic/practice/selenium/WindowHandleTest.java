@@ -62,6 +62,8 @@ public class WindowHandleTest {
 		
 		// switching to the frame, present in UI -
 		driver.switchTo().frame("result");
+
+		sleep2Seconds();
 		
 		// b) Get the second link, and clicking it to open New Window..
 		driver.findElements(By.className("main-tab-links")).get(0)

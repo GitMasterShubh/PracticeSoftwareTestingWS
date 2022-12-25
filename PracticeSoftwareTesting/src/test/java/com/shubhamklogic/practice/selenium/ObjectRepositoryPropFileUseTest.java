@@ -13,7 +13,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class ObjectRepositoryPropFileUseTest {
-private WebDriver driver;
+	private WebDriver driver;
 	
 	/**
 	 * @param browsers
@@ -44,7 +44,7 @@ private WebDriver driver;
 	
 	/**
 	 * @throws Exception
-	 * Q. What does this testPropertiesFilesObjectAccess() test case do?
+	 * Q. What does this testLoginByPropertiesFile() test case do?
 	 * A. Steps:  
 	 * 		a) Loads a properties file (Object Repository) = testing_static_details.properties
 	 * 		b) Use its key - values, to launch the URL
@@ -60,8 +60,7 @@ private WebDriver driver;
 		
 		// Step a) Load properties file (Object Repository)
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-			fullPropFilePath );
+		FileInputStream fis = new FileInputStream( fullPropFilePath );
 		prop.load(fis);
 		
 

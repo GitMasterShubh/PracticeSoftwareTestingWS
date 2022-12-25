@@ -1,0 +1,4 @@
+Errors - That need to be fixed :
+********************************
+1. Run all TestCases on Firefox--com.shubhamklogic.practice.selenium.NavigationTest
+
