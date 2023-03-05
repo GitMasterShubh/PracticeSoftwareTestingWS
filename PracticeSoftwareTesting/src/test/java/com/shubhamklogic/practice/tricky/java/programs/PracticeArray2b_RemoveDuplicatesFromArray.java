@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,9 +11,7 @@ import java.util.LinkedHashSet;
  * 
  * 
  * Other Scenarios: 
- * 	2. How to remove duplicates elements from ArrayList ? (Without considering final order of items) -  
- * 
- * 	3. How to remove duplicates elements from ArrayList preserving their order of items-
+ * 	2. How to remove duplicates elements from ArrayList preserving their order of items-
  * 
  */
 

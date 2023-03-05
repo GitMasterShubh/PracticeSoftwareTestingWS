@@ -16,7 +16,21 @@ import org.testng.annotations.Test;
  * @author ShubhamSrivastava
  * 
  * Below Test cases will help you to understand, which TestNG Annotation will execute first and which ones later.
- *
+ * 
+ * 
+ *	--->>> 1 : preSetup :: 		@BeforeSuite
+ *	--->>> 3 : login :: 		@BeforeTest
+ *	--->>> 2 : setup :: 		@BeforeClass
+ *	--->>> 5 : verifyIsLoggedIn :: 	@BeforeMethod
+ *	--->>> 6b : testProfilePic :: 	@Test
+ *	--->>> 7 : verifyLoggedOut :: 	@AfterMethod
+ *	--->>> 5 : verifyIsLoggedIn :: 	@BeforeMethod
+ *	--->>> 6a : testSettings :: 	@Test
+ *	--->>> 7 : verifyLoggedOut :: 	@AfterMethod
+ *	--->>> 10 : sendEmail :: 	@AfterClass
+ *	--->>> 9 : logout :: 		@AfterTest
+ *	--->>> 11 : quitDriver :: 	@AfterSuite
+ * 
  */
 
 public class PracticeTestNGAnnotationsTest {

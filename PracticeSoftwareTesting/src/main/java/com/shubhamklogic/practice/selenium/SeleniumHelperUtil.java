@@ -149,7 +149,7 @@ public class SeleniumHelperUtil {
 		SeleniumHelperUtil.driver = driver;
 	}
 
-	static WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver;
 	}
 	
@@ -264,6 +264,17 @@ public class SeleniumHelperUtil {
 		);
 		
 		log("Screenshot has been taken, and file has been saved. Refresh directory and check the screenshot file at location="+ssFinalFilePath);
+		
+	}
+
+	public static void log(String string, String itemSeperator) {
+		
+		
+		String [] arrItems = string.split(itemSeperator);
+		System.out.println("*** INFO: Splitted given String into =>"+ arrItems.length +"<= items with given seperator=>"+ itemSeperator+"<=");
+		
+		for( String item : arrItems)
+			System.out.println(item + itemSeperator);
 		
 	}
 }

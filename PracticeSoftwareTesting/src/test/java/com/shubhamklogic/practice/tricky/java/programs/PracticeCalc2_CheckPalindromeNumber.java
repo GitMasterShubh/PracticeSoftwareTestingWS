@@ -1,11 +1,12 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import com.shubhamklogic.practice.selenium.SeleniumHelperUtil;
 
 /* 
    Problem : Check Whether a Number is Palindrome or Not.
    Solution: 
-   			An integer is a palindrome if the reverse of that number is equal to the original number
+   			An integer is a palindrome if the reverse of that number is equal to 
+   			the original number
    Input   : 2332
    Output  : Palindrome Number
    
@@ -23,7 +24,8 @@ public class PracticeCalc2_CheckPalindromeNumber {
 		
 	}
 
-	// An integer is a palindrome, if the reverse of that number is equal to the original number
+	// An integer is a palindrome, if the reverse of that number is equal to 
+	// the original number
 	private static void checkPalindrome(int n) {
 		
 		int rev = 0, rem = 0, actNum = n;

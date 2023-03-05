@@ -9,39 +9,52 @@
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
-		    <groupId>org.seleniumhq.selenium</groupId>
-		    <artifactId>selenium-java</artifactId>
-		    <version>4.4.0</version>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.4.0</version>
 		</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
-		    <groupId>io.github.bonigarcia</groupId>
-		    <artifactId>webdrivermanager</artifactId>
-		    <version>5.3.0</version>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.3.0</version>
 		</dependency>
-		
-		
+
+
 		<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-		<!-- Session_18 : Sikuli Usage 
-			  			  Commenting the dependency due to incompatibility with other dependencies of this project.
-		-->
-		<!-- <dependency>
-		    <groupId>com.sikulix</groupId>
-		    <artifactId>sikulixapi</artifactId>
-		    <version>2.0.5</version>
-		</dependency> -->
-		
+		<!-- Session_18 : Sikuli Usage Commenting the dependency due to incompatibility 
+			with other dependencies of this project. -->
+		<!-- <dependency> <groupId>com.sikulix</groupId> <artifactId>sikulixapi</artifactId> 
+			<version>2.0.5</version> </dependency> -->
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- To create TestNG based Testcases, we require this dependency. To execute 
+			them, we need to install TestNG in our IDE -->
 		<dependency>
-		    <groupId>org.testng</groupId>
-		    <artifactId>testng</artifactId>
-		    <version>7.7.0</version>
-		    <scope>test</scope>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.7.0</version>
+			<scope>test</scope>
 		</dependency>
-		
-		
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

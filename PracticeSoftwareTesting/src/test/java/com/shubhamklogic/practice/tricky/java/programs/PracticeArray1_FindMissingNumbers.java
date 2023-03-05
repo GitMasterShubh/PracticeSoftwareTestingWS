@@ -1,20 +1,24 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.Arrays;
 import java.util.BitSet;
 
-/* Problem : How to Find Missing Number on Integer Array of 1 to 100 ?
+/* Problem : Print Missing Number from Given Array.
    Solution:
-   		Solving the problem with BitSet 
+   		
 */
+
 public class PracticeArray1_FindMissingNumbers {
 
 	public static void main(String[] args) {
 		
-		printSingleMissingNumber(new int[]{1, 2, 3, 4, 6}, 6);		// Passing array with 1 missing number..
-		System.out.println("\n\n\n**************** \n\n");
-		printAllMissingNumbers(new int[]{1, 2, 4, 5, 8, 7}, 8);		// Passing array with 2 missing numbers..
+		printSingleMissingNumberInRandomArray(new int[]{ 10,8,9,2,3,4,5,7,6 }, 9);
+		log("\n\n\n**************** \n\n");							// Passing random array with 1 missing number from 1 till 10..
 		
+		printSingleMissingNumber(new int[]{1, 2, 3, 4, 6}, 6);		// Passing array with 1 missing number..
+		log("\n\n\n**************** \n\n");
+		
+		printAllMissingNumbers(new int[]{1, 2, 4, 5, 8, 7}, 8);		// Passing array with 2 missing numbers..
 	}
 	
 	// Method : BitSet class-
@@ -44,8 +48,8 @@ public class PracticeArray1_FindMissingNumbers {
         	
         	// Current situation :
         	// 		  index = {0  1  2  3  4  5  6  7}
-        	// 		currSet = (t, t, F, t, t, F, t, t)		You can assume as, currSet.set(0); will change that BitSet index 0 value from FALSE to TRUE;
-
+        	// 		currSet = (t, t, F, t, t, F, t, t)		You can assume as, currSet.set(0); 
+        	//											  	will change that BitSet index 0 value from FALSE to TRUE;		
         	
         	// Find nextClearBit (next FALSE bit), it's 2 for the first run..
         	int missingNumber = bitSet.nextClearBit( nextMissingIndex );
@@ -64,7 +68,30 @@ public class PracticeArray1_FindMissingNumbers {
 			actualSum += k;
 		
 		System.out.println("Current List " + Arrays.toString(arr));
-		
 		System.out.println("One Missing Number = "+ (expectedSum - actualSum));
 	}
+
+
+
+
+	// Method : Sum = n*(n+1) / 2
+	private static void printSingleMissingNumberInRandomArray(int[] arr, int i) {
+				
+		int totalNums = arr.length+1;
+		int fullSum = totalNums * (totalNums+1) / 2;
+		int partialSum = 0;
+		for ( int k : arr) {
+			partialSum += k;
+		}
+		
+		System.out.println("Array = "+ Arrays.toString( arr ) );
+		
+		System.out.println("Missing number in Array = " + (fullSum - partialSum));
+	}
+
+	
+	private static void log(String string) {
+		System.out.print(string);
+	}
+	
 }

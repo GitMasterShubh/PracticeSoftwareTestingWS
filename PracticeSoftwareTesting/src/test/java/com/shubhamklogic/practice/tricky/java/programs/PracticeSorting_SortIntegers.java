@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.Arrays;
 
@@ -55,7 +55,7 @@ public class PracticeSorting_SortIntegers {
 			for( int j=i+1; j < arrSize; j++ ) {
 				
 				if( arr[j] < arr[iMin] )	// check presence of any other array value, which is smaller than assumed minimum val.
-					iMin = j;
+					iMin = j;				// j found as new minimum
 			}
 			
 			int tmp = arr[i];				// store the new minimum val. and swap with assumed minimum val.. 
@@ -75,11 +75,12 @@ public class PracticeSorting_SortIntegers {
 	
 	private static void sortMethod3_BubbleSort( int[] arr) {
 		
-		SeleniumHelperUtil.log("\n\n***\nMethod3:: Before sorting:\n" + Arrays.toString( arr ));
+		SeleniumHelperUtil.log("\n\n***\nMethod3:: Before Bubble sort:\n" + Arrays.toString( arr ));
 		int arrSize = arr.length;
 		
-		for(int pass = 1; pass < arrSize-1; pass++) {
-			for(int j = 0; j < arrSize-1; j++) {
+		for(int pass = 0; pass < arrSize-1; pass++) {
+			
+			for(int j = 0; j < arrSize-1-pass; j++) {
 				
 				if( arr[j] > arr[j+1] ) {
 					int tmp = arr[j];
@@ -88,7 +89,7 @@ public class PracticeSorting_SortIntegers {
 				}
 			}
 		}
-		SeleniumHelperUtil.log("\n\n***\nMethod3:: After sorting :\n" + Arrays.toString( arr ));
+		SeleniumHelperUtil.log("\n\n***\nMethod3:: After Bubble sort :\n" + Arrays.toString( arr ));
 	}
 	
 	
@@ -98,6 +99,7 @@ public class PracticeSorting_SortIntegers {
 	 * Desc: Using Inserting Sort Algorithm to sort an Integer array-
 	 * 
 	 */
+	
 	private static void sortMethod4_InsertionSort( int[] arr) {
 		
 		SeleniumHelperUtil.log("\n\nMethod4:: Before Insertion Sort: "+ Arrays.toString(arr) );
@@ -129,6 +131,11 @@ public class PracticeSorting_SortIntegers {
 	 * 		Time  Complexity => O(nLogn)
 	 * 
 	 */
+	
+	//					arrInt1 = new int[]{10,-40,0,30,-5};
+	//					sortMethod5_MergeSort(arrInt1);			// Method 5: Use Merge Sort algorithm
+	
+	
 	private static void sortMethod5_MergeSort(int[] arr) {
 		
 		SeleniumHelperUtil.log("\n\nMethod5:: Before Merge Sort: "+ Arrays.toString(arr) );
@@ -217,8 +224,8 @@ public class PracticeSorting_SortIntegers {
 
 	private static void quickSort(int[] arr, int startIndex, int endIndex) {
 		
-		if( startIndex < startIndex )							// Base Condition : start < end :: coz there may be some calls when  start Or end can be negative values...
-		{			
+		if( startIndex < startIndex )				// Base Condition : start < end ::
+		{											// 	coz there may be some calls when  start OR end can have negative values	
 			// Get Partition Index
 			int partitionIndex = getPartitionIndex( arr, startIndex, startIndex );	
 			quickSort( arr, startIndex, partitionIndex-1 );		// Call Again and pass   Prev Section from 	Partition Index
@@ -235,10 +242,10 @@ public class PracticeSorting_SortIntegers {
 		{
 			if( arr[i] < partiVal )					// check : if CurrVal < partiVal
 			{
-				int temp = arr[i];					// swap CurrVal ~ arr[partiInd]		coz we want All Elements    lesser than the PivotVal must be   earlier than PartiInd..
-				arr[i] = arr[partiInd];
+				int temp = arr[i];					// swap CurrVal ~ arr[partiInd]		
+				arr[i] = arr[partiInd];				//		coz we want All Elements    lesser than the PivotVal must be   
 				arr[partiInd] = temp;
-				partiInd++;
+				partiInd++;							//									earlier than PartiInd..
 			}
 		}
 		int temp = arr[endIndex];					// swap LastValOfArr ~ PartiIndVal

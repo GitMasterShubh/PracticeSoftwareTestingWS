@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import com.shubhamklogic.practice.selenium.SeleniumHelperUtil;
 

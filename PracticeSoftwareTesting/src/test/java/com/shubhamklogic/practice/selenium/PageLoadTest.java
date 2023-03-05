@@ -10,6 +10,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PageLoadTest {
+	
 	private WebDriver driver;
 
 	@BeforeClass(alwaysRun = true)
@@ -22,9 +23,11 @@ public class PageLoadTest {
 		SeleniumHelperUtil.setup(browsers, browserDriverSetupMode);
 		driver = SeleniumHelperUtil.getDriver();
 	}
-
+	
 	@Test(priority=1, testName = "Page Load Test - Without Wait", groups = { "selenium-intermediate", "current" })
 	public void testPageLoad() throws Exception {
+		
+		
 		driver.get("https://www.shubhamklogic.com/");
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
@@ -36,6 +39,7 @@ public class PageLoadTest {
 		driver.findElement(By.xpath(".//div[@class='icons']//a//img[@alt='LinkedIn']")).click();
 		
 		Thread.sleep(3000);
+		
 	}
 	
 	@AfterClass( alwaysRun = true)
