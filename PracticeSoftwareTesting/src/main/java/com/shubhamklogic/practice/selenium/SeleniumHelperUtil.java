@@ -2,6 +2,7 @@ package com.shubhamklogic.practice.selenium;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -276,5 +277,12 @@ public class SeleniumHelperUtil {
 		for( String item : arrItems)
 			System.out.println(item + itemSeperator);
 		
+	}
+
+	public static void log(int[][] matrix, String msg) {
+		
+		System.out.println("----- "+msg+" -----");
+		for( int [] r : matrix) 
+			System.out.println( Arrays.toString(r) );
 	}
 }
