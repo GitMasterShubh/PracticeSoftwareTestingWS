@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName" : "Shubh",
+      "lastName" : "Srivastava",
+      "subjectId": "1"
+      
+    },
+    {
+      "id": 2,
+      "firstName" : "Hitesh",
+      "lastName" : "Roshan",
+      "subjectId": "2"
+    },
+    {
+      "id": 3,
+      "firstName" : "Ginny",
+      "lastName" : "Beniyal",
+      "subjectId": "1"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Automate"
+    },
+    {
+      "id" : 2,
+      "name" : "DevOps"
+    }
+  ],
+  "profile": {
+    "name": "ShubhamKLogic"
+  }
+}
