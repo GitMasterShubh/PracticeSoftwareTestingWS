@@ -127,6 +127,7 @@ public class SeleniumHelperUtil {
 					chromeOptions.addArguments("start-maximized"); 			// open Browser in maximized mode
 					chromeOptions.addArguments("disable-infobars"); 		// disabling infobars
 					chromeOptions.addArguments("--ignore-certificate-errors");
+					chromeOptions.addArguments("--remote-allow-origins=*");
 					chromeOptions.setAcceptInsecureCerts(true);				// AcceptInsecureCerts 
 					
 					
