@@ -42,10 +42,10 @@ public class PracticeCalc10_Medium_MergeInterval_2DArrayCalc_LeetCode {
 		// T.C.=> O(nLogn) + O(n)	=> Sorting time + Traversing
 		// S.C.=> O(n) in Worst case
 		
-		List<int[]> res = new ArrayList<>();				// Create a List to store result.
+		List res = new ArrayList<Integer>();				// Create a List to store result.
 		
 		if( intervals == null || intervals.length == 0 )	// Return if given intervals size == 0
-			return res.toArray( new int[0][]);
+			return (int[][]) res.toArray( new int[0][]);
 			
 		intervals = sortIntervals( intervals );		// Sort the intervals based on lower points.
 
@@ -85,7 +85,7 @@ public class PracticeCalc10_Medium_MergeInterval_2DArrayCalc_LeetCode {
 		}
 		// Once you traverse the all pairs, add the last calculated pairs in result list of pairs
 		res.add( new int[] {start, end});
-		return res.toArray(new int[0][]);				// Return the list as a 2-d Array, as we already provided bland 2-d Array.. 
+		return (int[][]) res.toArray(new int[0][]);		// Return the list as a 2-d Array, as we already provided bland 2-d Array.. 
 	}
 
 	public static int[][] sortIntervals(int [][] intervals) {

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="com.shubhamklogic.selenium.practice">
   
-  <parameter name="browsers" value="chrome"/>
+  <parameter name="browsers" value="firefox"/>
 	  	<!-- 
 	 		Desc: Parameter=browsers
 	 		This parameter configures at which browser the test cases would be executed.
