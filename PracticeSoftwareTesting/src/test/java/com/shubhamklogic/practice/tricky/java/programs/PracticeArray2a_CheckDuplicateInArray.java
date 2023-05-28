@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -28,12 +28,12 @@ public class PracticeArray2a_CheckDuplicateInArray {
 		
 		techniqueOneToCheckDuplicate(arr);			// technique 1..Insert no.s in Set, If returns False -- Got duplicate !!
 
-		techniqueTwoToCheckDuplicate(arr);			// technique 2..Create List, Create Set, If both's size is diff -- Got duplicate !!
+		techniqueTwoToCheckDuplicate(arr);			// technique 2..Create List, Create Set, Compare size of both
 
 		techniqueThreeToCheckDuplicate(arr);		// technique 3..Compare each value, with whole array values..
 
 	}
-	// Insert no.s in Set, If returns False -- Got duplicate
+	// technique 1..Insert no.s in Set, If returns False -- Got duplicate !!
 	private static void techniqueOneToCheckDuplicate(Object[] arr) {
 		
 		Set set = new HashSet();
@@ -50,7 +50,7 @@ public class PracticeArray2a_CheckDuplicateInArray {
 			System.out.println("Way 1) There are NO duplicate element(s) in array\n\n");
 	}
 
-	// Using Java Collection Framework - Set
+	// technique 2..Create List, Create Set, If both's size is diff -- Got duplicate !!
 	private static void techniqueTwoToCheckDuplicate(Object[] arr) {
 		// compare size of Set and Array
 
@@ -64,10 +64,9 @@ public class PracticeArray2a_CheckDuplicateInArray {
 			System.out.println("Way 2) There are DUPLICATE element(s) in array\n\n");
 		else
 			System.out.println("Way 2) There are NO duplicate element(s) in array\n\n");
-
 	}
 
-	// BruteForce Technique -
+	// technique 3..BruteForce Technique - Compare each value, with whole array values..
 	private static void techniqueThreeToCheckDuplicate(Object[] arr) {
 
 		boolean notFoundDuplicate = true;
@@ -84,5 +83,4 @@ public class PracticeArray2a_CheckDuplicateInArray {
 		if (notFoundDuplicate) 
 			System.out.println("Way 3) There are NO duplicate element(s) in array\n\n");
 	}
-
 }

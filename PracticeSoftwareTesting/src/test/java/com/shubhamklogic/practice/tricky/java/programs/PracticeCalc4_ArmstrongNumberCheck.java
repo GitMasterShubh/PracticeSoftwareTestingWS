@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 /* 
    Problem : Display Armstrong Number Between Two Intervals 

@@ -2,6 +2,7 @@ package com.shubhamklogic.practice.selenium;
 
 import java.io.File;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -126,6 +127,7 @@ public class SeleniumHelperUtil {
 					chromeOptions.addArguments("start-maximized"); 			// open Browser in maximized mode
 					chromeOptions.addArguments("disable-infobars"); 		// disabling infobars
 					chromeOptions.addArguments("--ignore-certificate-errors");
+					chromeOptions.addArguments("--remote-allow-origins=*");
 					chromeOptions.setAcceptInsecureCerts(true);				// AcceptInsecureCerts 
 					
 					
@@ -149,7 +151,7 @@ public class SeleniumHelperUtil {
 		SeleniumHelperUtil.driver = driver;
 	}
 
-	static WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver;
 	}
 	
@@ -265,5 +267,23 @@ public class SeleniumHelperUtil {
 		
 		log("Screenshot has been taken, and file has been saved. Refresh directory and check the screenshot file at location="+ssFinalFilePath);
 		
+	}
+
+	public static void log(String string, String itemSeperator) {
+		
+		
+		String [] arrItems = string.split(itemSeperator);
+		System.out.println("*** INFO: Splitted given String into =>"+ arrItems.length +"<= items with given seperator=>"+ itemSeperator+"<=");
+		
+		for( String item : arrItems)
+			System.out.println(item + itemSeperator);
+		
+	}
+
+	public static void log(int[][] matrix, String msg) {
+		
+		System.out.println("----- "+msg+" -----");
+		for( int [] r : matrix) 
+			System.out.println( Arrays.toString(r) );
 	}
 }

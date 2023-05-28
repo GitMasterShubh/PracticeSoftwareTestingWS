@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="com.shubhamklogic.selenium.practice.browserOpen">
+  
+  
+  
+  <test name="BrowsersOpenTest">
+  
+  		<parameter name="browser" value="chrome"/>
+  		
+  		<classes>
+  			<class name="com.browserstack.screenshotflow.ScreenshotFlowTest"/>
+  		</classes>
+  </test>
+</suite>

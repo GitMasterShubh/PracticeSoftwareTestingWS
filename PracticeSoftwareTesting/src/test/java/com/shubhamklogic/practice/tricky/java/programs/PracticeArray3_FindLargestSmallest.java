@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.Arrays;
 
@@ -18,13 +18,17 @@ public class PracticeArray3_FindLargestSmallest {
 
 	private static void findLargestAndSmallest(int []arr) {
 		
-		int largest = Integer.MIN_VALUE;		// set the largest -> MINIMUM value, so other value Bigger than that can be captured..
-		int smallest = Integer.MAX_VALUE;		// set the smallest -> MAXIMUM value, so other value Smaller than that can be captured..
+		// set the largest -> MINIMUM value, so other value Bigger than that can be captured..
+		int largest = Integer.MIN_VALUE;
 		
-		for ( int n : arr) {					// Check complete array..
-			if ( n > largest )
+		// set the smallest -> MAXIMUM value, so other value Smaller than that can be captured..
+		int smallest = Integer.MAX_VALUE;
+		
+		// check complete array..
+		for ( int n : arr) {
+			if ( n > largest )					// Found new largest value, update it..
 				largest = n;
-			if ( n < smallest )
+			if ( n < smallest )					// Found new smallest value, update it..
 				smallest = n;
 		}
 		

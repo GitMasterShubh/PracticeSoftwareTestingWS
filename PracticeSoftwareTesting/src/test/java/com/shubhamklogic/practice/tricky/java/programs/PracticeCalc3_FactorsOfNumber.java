@@ -1,4 +1,4 @@
-package com.shubhamklogic.practice.java.tricky.programs;
+package com.shubhamklogic.practice.tricky.java.programs;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="com.shubhamklogic.selenium.practice.browserOpen">
+<suite name="com.shubhamklogic.selenium.practice">
   
-  <parameter name="browsers" value="chrome"/>
+  <parameter name="browsers" value="firefox"/>
 	  	<!-- 
 	 		Desc: Parameter=browsers
 	 		This parameter configures at which browser the test cases would be executed.
 	 	-->
   
-  <parameter name="browserDriverSetupMode" value="executableBrowserDrivers" />
+  <parameter name="browserDriverSetupMode" value="webDriverManager" />
 	  	<!-- 
 			Desc: Parameter=browserDriverSetupMode 
 			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
 	  	-->
   
-  <test name="ShubhamKLogic.com : Accessing Web Elements Inside Frames Test">
+  <test name="ShubhamKLogic.com : Fluent Wait - Custom Wait Testing">
   		<!-- 
 	  		To run any specific test case, 
 	  		1. uncomment below <groups> tag code
@@ -26,7 +26,7 @@
 	  			</run>
 	  		</groups> -->
   		<classes>
-  			<class name="com.shubhamklogic.practice.selenium.ElementsInsideFramesTest"/>
+  			<class name="com.shubhamklogic.practice.selenium.FluentWaitTest"/>
   		</classes>
   </test>
 </suite>

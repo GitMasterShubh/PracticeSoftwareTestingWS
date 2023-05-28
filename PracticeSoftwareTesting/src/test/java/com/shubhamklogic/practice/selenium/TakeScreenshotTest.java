@@ -40,7 +40,7 @@ public class TakeScreenshotTest {
 		// preparing file name with path
 		String fullPathWithFileName = location + fileSep + "/src/main/resources/AllMiscFiles/ShubhamKLogic_HomePage_Screenshot.png";
 		
-		// Using TakesScreenshot Interface and getScreenshotAt method-
+		// Using TakesScreenshot Interface and getScreenshotAt method, by passing OutputType Interface Object-
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		
 		// Copying the source file to fullPathWithFileName target location-

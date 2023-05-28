@@ -8,18 +8,18 @@
 	 		This parameter configures at which browser the test cases would be executed.
 	 	-->
   
-  <parameter name="browserDriverSetupMode" value="webDriverManager" />
+  <parameter name="browserDriverSetupMode" value="executableBrowserDrivers" />
 	  	<!-- 
 			Desc: Parameter=browserDriverSetupMode 
 			This parameter tests the setup the browser driver via = webDriverManager / executableBrowserDrivers
 	  	-->
   
   <test name="ShubhamKLogic.com : PageL oad Test">
-  		<groups>
+  		<!-- <groups>
   			<run>
   				<include name="current" />
   			</run>
-  		</groups>
+  		</groups> -->
   		<classes>
   			<class name="com.shubhamklogic.practice.selenium.PageLoadTest"/>
   		</classes>

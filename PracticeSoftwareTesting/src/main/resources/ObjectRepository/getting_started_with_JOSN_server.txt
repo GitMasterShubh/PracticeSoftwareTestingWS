@@ -1,0 +1,25 @@
+Getting started with Json-Server :
+= = = = =
+
+What is Json-Server?
+>> JSON Server is a Node Module that you can use to create Demo REST WebService with JSON in less than a minute. All you need is a JSON file for sample data.
+
+
+Source of installation ?
+>> Check this video : https://youtu.be/V7sLq7u28BA?list=PLhW3qG5bs-L8xPrBwDv66cTMlFNeUPdJx
+>> Run these commands :
+	## Comment : To install json-server using Node. 
+	>> npm install json-server
+	
+	## Comment : Create the db.json file in current directory
+	>> npx json-server --watch db.json
+	
+	
+Once db.json configuration file will have default data, then you can get these many resources -
+>> Resources
+	  http://localhost:3000/posts
+	  http://localhost:3000/comments
+	  http://localhost:3000/profile
+
+>> Home
+  	  http://localhost:3000
