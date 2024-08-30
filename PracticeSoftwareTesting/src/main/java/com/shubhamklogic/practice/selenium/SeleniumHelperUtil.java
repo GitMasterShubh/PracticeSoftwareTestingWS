@@ -64,13 +64,18 @@ public class SeleniumHelperUtil {
 				// chrome browser
 				if (browser.contains("chrome")) {
 					log("setting chromedriver...");
+					
+
+					// Do Not Commit below Change..
+					
 					System.setProperty("webdriver.chrome.driver",
-							"/Users/ssrivastava/shubh-workspace/SoftwaresDownloaded/BrowserDrivers/chromedriver");
+					 		"/Users/ssrivastava/shubh-workspace/SoftwaresDownloaded/BrowserDrivers/chromedriver");
 					
 					ChromeOptions chromeOptions = new ChromeOptions();
 					chromeOptions.addArguments("start-maximized"); 			// open Browser in maximized mode
 					chromeOptions.addArguments("disable-infobars"); 		// disabling infobars
 					chromeOptions.addArguments("--ignore-certificate-errors");
+					chromeOptions.addArguments("--remote-allow-origins=*");
 					chromeOptions.setAcceptInsecureCerts(true);				// AcceptInsecureCerts 
 					
 					driver = new ChromeDriver(chromeOptions);

@@ -19,12 +19,12 @@
 	  		To run any specific test case, 
 	  		1. uncomment below <groups> tag code
 	  		2. go to your below test class, and add word "current" in @test annotation attribute : groups = {"current", "other-group-values"} 
-	  		
+	  		 -->
 	  		<groups>
 	  			<run>
 	  				<include name="current" />
 	  			</run>
-	  		</groups> -->
+	  		</groups>
   		<classes>
   			<class name="com.shubhamklogic.practice.selenium.MouseHoverTest"/>
   		</classes>

@@ -8,6 +8,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -21,6 +23,8 @@ import org.testng.annotations.Test;
 public class FindBrokenLinksInWebpage {
 
 	private WebDriver driver;
+	Logger logger = LoggerFactory.getLogger(FindBrokenLinksInWebpage.class);
+	
 	
 	/**
 	 * @param browsers
@@ -38,6 +42,7 @@ public class FindBrokenLinksInWebpage {
 	@Parameters({ "browsers", "browserDriverSetupMode" })
 	public void preSetup(String browsers, String browserDriverSetupMode) {
 		
+		logger.info("**** Shubh Logging : Setting up browser driver..");
 		// a) To setup the browser drivers and browsers to be called in future-
 		SeleniumHelperUtil.log("preSetup of browser drivers and browsers to be called in future. Browsers='" + browsers
 							 + "', browserDriverSetupMode='" + browserDriverSetupMode + "'");
@@ -72,7 +77,8 @@ public class FindBrokenLinksInWebpage {
 			String attrHref = e.getAttribute("href");
 			SeleniumHelperUtil.log(attrHref);
 			
-			if ( ! attrHref.contains("javascript:") ) {					// removing links which are using js to launch url..
+			// Removing links which are using js to launch url..
+			if ( ! attrHref.contains("javascript:") ) {
 				activeLinks.add(attrHref);
 			}
 		}
@@ -80,14 +86,19 @@ public class FindBrokenLinksInWebpage {
 		
 		// 3. Verify, whether the link is active or not..
 		
-		for(String strUrl : activeLinks) {
+		for(String strURL : activeLinks) {
 			
-			HttpURLConnection httpConnection = (HttpURLConnection) new URL( strUrl ).openConnection();
+			HttpURLConnection httpConnection = (HttpURLConnection) new URL( strURL ).openConnection();
 			httpConnection.connect();
+			int respCode = httpConnection.getResponseCode();
 			String respMsg = httpConnection.getResponseMessage();
+			
+			if( respCode >= 400 && respCode < 600) {
+				System.out.println("Found Broken Link = " + strURL);
+			}
 			httpConnection.disconnect();
 			
-			SeleniumHelperUtil.log(" "+ respMsg + " <-- " + strUrl);
+			SeleniumHelperUtil.log(" "+ respMsg + " <-- " + strURL);
 		}
 	}
 }

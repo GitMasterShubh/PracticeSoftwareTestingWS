@@ -58,7 +58,7 @@ public class PracticeSorting_SortIntegers {
 					iMin = j;				// j found as new minimum
 			}
 			
-			int tmp = arr[i];				// store the new minimum val. and swap with assumed minimum val.. 
+			int tmp = arr[i];				// swap curr. index value with min. index value 
 			arr[i] = arr[iMin];
 			arr[iMin] = tmp;
 		}
@@ -77,7 +77,7 @@ public class PracticeSorting_SortIntegers {
 		
 		SeleniumHelperUtil.log("\n\n***\nMethod3:: Before Bubble sort:\n" + Arrays.toString( arr ));
 		int arrSize = arr.length;
-		
+		int flag = 0;
 		for(int pass = 0; pass < arrSize-1; pass++) {
 			
 			for(int j = 0; j < arrSize-1-pass; j++) {
@@ -86,7 +86,11 @@ public class PracticeSorting_SortIntegers {
 					int tmp = arr[j];
 					arr[j] = arr[j+1];
 					arr[j+1] = tmp;
+					flag = 1;
 				}
+			}
+			if (flag == 0) {
+				break;
 			}
 		}
 		SeleniumHelperUtil.log("\n\n***\nMethod3:: After Bubble sort :\n" + Arrays.toString( arr ));
@@ -106,17 +110,17 @@ public class PracticeSorting_SortIntegers {
 		
 		for( int i=1; i<arr.length; i++ ) {
 			
-			int hole = i;
-			int value = arr[hole];
+			int holeInd = i;
+			int holeValue = arr[holeInd];
 			
-			while ( hole > 0 && arr[hole-1] > arr[hole]) {
-				int tmp = arr[hole];
-				arr[hole] = arr[hole-1];
-				arr[hole-1] = tmp;
+			while ( holeInd > 0 && arr[holeInd-1] > arr[holeInd]) {
+				int tmp = arr[holeInd];
+				arr[holeInd] = arr[holeInd-1];
+				arr[holeInd-1] = tmp;
 				
-				hole = hole-1;
+				holeInd = holeInd-1;
 			}
-			arr[hole] = value;
+			arr[holeInd] = holeValue;
 		}
 		SeleniumHelperUtil.log("\n\nMethod4:: After Insertion Sort : "+ Arrays.toString(arr) );
 	}
@@ -149,12 +153,12 @@ public class PracticeSorting_SortIntegers {
 	// part1 of : sortMethod5_MergeSort() :: mergeSort Logic
 	private static void mergeSort(int[] arr) {
 		
+		if( arr.length < 2)
+			return;
+		
 		int i = 0, j = 0, mid = arr.length/2;
 		int leftArr[] = new int[ mid] ;
 		int rightArr[] = new int[ arr.length - mid ] ;
-		
-		if( arr.length < 2)
-			return;
 		
 		while ( i < leftArr.length ) {
 			leftArr[i] = arr[i];
@@ -224,12 +228,12 @@ public class PracticeSorting_SortIntegers {
 
 	private static void quickSort(int[] arr, int startIndex, int endIndex) {
 		
-		if( startIndex < startIndex )				// Base Condition : start < end ::
+		if( startIndex < endIndex )					// Base Condition : start < end ::
 		{											// 	coz there may be some calls when  start OR end can have negative values	
 			// Get Partition Index
-			int partitionIndex = getPartitionIndex( arr, startIndex, startIndex );	
+			int partitionIndex = getPartitionIndex( arr, startIndex, endIndex );	
 			quickSort( arr, startIndex, partitionIndex-1 );		// Call Again and pass   Prev Section from 	Partition Index
-			quickSort( arr, partitionIndex+1 , startIndex );	// Call Again and pass   Next Section from 	Partition Index
+			quickSort( arr, partitionIndex+1 , endIndex );		// Call Again and pass   Next Section from 	Partition Index
 		}
 	}
 
