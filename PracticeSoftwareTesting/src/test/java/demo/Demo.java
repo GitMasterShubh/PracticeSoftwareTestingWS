@@ -62,7 +62,7 @@ class Demo {
 		// [10,8,6,12,14]  = 5
 		// [10,8,6,12,14,4]= 6
 		
-		if (arr.length < 2) return;		// Base condition : Returns if arr.length = 1
+		if (arr.length < 2) return;		// Base condition :: Returns if arr.length = 1
 		int mid = arr.length / 2;
 		
 		int[] arrLeft = new int[mid];
