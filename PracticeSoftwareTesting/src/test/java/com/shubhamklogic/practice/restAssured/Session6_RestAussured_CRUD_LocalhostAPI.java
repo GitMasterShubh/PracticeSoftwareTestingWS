@@ -45,7 +45,6 @@ public class Session6_RestAussured_CRUD_LocalhostAPI {
 	public void getUser(){
 		
 		RestAssured.baseURI = "";
-		
-		
+			
 	}
 }

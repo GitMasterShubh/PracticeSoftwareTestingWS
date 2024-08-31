@@ -10,11 +10,9 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-/* Problem :  Print your name from Mixed String.
+/* Problem :  (In this class, multiple interview level questions have been covered).
    Solution:
 */
-
-
 
 
 interface SomeInterface 

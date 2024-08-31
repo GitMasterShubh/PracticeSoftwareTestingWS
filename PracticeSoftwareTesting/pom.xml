@@ -5,6 +5,10 @@
 	<groupId>com.shubhamklogic</groupId>
 	<artifactId>PracticeSoftwareTesting</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<apache-poi>5.2.3</apache-poi>
+		<!-- <log4j.configurationFile>src/test/java/log4j.properties</log4j.configurationFile> -->
+	</properties>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -76,7 +80,7 @@
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
 		    <artifactId>poi</artifactId>
-		    <version>5.2.3</version>
+		    <version>${apache-poi}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -93,6 +97,35 @@
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-api</artifactId>
 		    <version>2.0.9</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>${apache-poi}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-scratchpad</artifactId>
+		    <version>${apache-poi}</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml-schemas</artifactId>
+		    <version>4.1.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>1.7.12</version>
 		</dependency>
 
 	</dependencies>
