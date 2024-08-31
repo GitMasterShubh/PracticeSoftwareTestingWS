@@ -24,7 +24,7 @@ class Demo {
         sort6_ViaQuickSort(arr, 0, arr.length-1);
 		SeleniumHelperUtil.log("\n\nAfter Full Sorting  :\n" + Arrays.toString( arr ));
 
-//		System.out.println("---- Mouseover text in Selenium WebDriver+Java Test is completed successfully !!");
+//		System.out.println("---- Mouseover text in Selenium WebDriver + Java Test is completed successfully !!");
 	}
 
 	private static void sort6_ViaQuickSort(int[] arr, int start, int end) {
