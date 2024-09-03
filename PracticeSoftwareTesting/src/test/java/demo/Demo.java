@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.shubhamklogic.practice.selenium.SeleniumHelperUtil;
 
 /**
- * This is a Demo class for practicing anything..
+ * This is a Demo class for practicing anything related to Testing and Java Programming..
  */
 class Demo {
 	
