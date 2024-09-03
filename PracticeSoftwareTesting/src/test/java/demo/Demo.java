@@ -12,7 +12,9 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.shubhamklogic.practice.selenium.SeleniumHelperUtil;
 
-
+/**
+ * This is a Demo class for practicing anything..
+ */
 class Demo {
 	
 	private static WebDriver driver;
